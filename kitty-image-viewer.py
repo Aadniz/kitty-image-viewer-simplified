@@ -1,13 +1,10 @@
 #!/usr/bin/env python3
-import requests
 import os
 import sys
 import time
 import subprocess
 import glob
 
-
-#print (sendRequest("/api/v1/channels.history").json())
 
 startarguments = sys.argv[1:]
 originalarguments = startarguments
@@ -85,10 +82,6 @@ for argument in temparguments2:
 		arguments.append(argument)
 
 
-#response = requests.get(url + "/api/v1/users.getAvatar", params=parameters, headers=auth)
-#p = subprocess.Popen(['/usr/bin/kitty', 'icat', '/home/chiya/Pictures/Anime/76495665_p0.png'])
-
-#<width>x<height>@<left>x<top>
 if len(arguments) == 1:
 	if os.path.isdir(arguments[0]):
 		folderpath = arguments[0]
@@ -97,7 +90,6 @@ if len(arguments) == 1:
 		arguments = []
 		for file in glob.glob(folderpath + "*"):
 			arguments.append(file)
-		#arguments = glob.glob(folderpath)
 	elif arguments[0] == "--help" or arguments[0] == "-h":
 		helpmenu()
 elif len(arguments) > 1:
@@ -130,7 +122,6 @@ if len(arguments) > 1:
 			else:
 				subprocess.run(["/usr/bin/kitty", "icat", arg])
 		elif showTerminalMaxImage == True:
-			## CHANGE THIS!!
 			if behindText == True:
 				if firstOneShown == False:
 					subprocess.run(["/usr/bin/kitty", "icat", "-z=-1", "--place=" + str(columns)+"x"+str(rows-1)+"@"+"0x0", "--align", "center", arg])
@@ -145,7 +136,6 @@ if len(arguments) > 1:
 				else:
 					print()
 					subprocess.run(["/usr/bin/kitty", "icat", "--place=" + str(columns)+"x"+str(rows)+"@"+"0x"+str(rows), "--align", "center", arg])
-			## CHANGE THIS!!
 		else:
 			if behindText == True:
 				subprocess.run(["/usr/bin/kitty", "icat", "-z=-1", "--place=" + str(columns//4)+"x19"+"@"+str(currentleft)+"x"+str(currenttop), "--align", "left", arg])
