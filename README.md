@@ -7,7 +7,7 @@ The program works on linux (haven't tested on )
 ![Single image usage screenshot](/Screenhots/Screenshot_20200604_190754.png "Single image")
 ![Multiple images usage screenshot](/Screenhots/Screenshot_20200604_191012.png "Multiple images")
 ![Multiple images behind text usage screenshot](/Screenhots/Screenshot_20200604_191044.png "Multiple images behind text")
-![Single image behind text terminal max usage screenshot](/Screenhots/Screenshot_20200604_191044.png "Single image behind text terminal max")
+![Single image behind text terminal max usage screenshot](/Screenhots/Screenshot_20200604_192147.png "Single image behind text terminal max")
 
 
 ## Dependencies
