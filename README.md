@@ -2,6 +2,10 @@
 This is a python script that makes it easier to display multiple images at once in kitty terminal.
 The program works on linux (haven't tested on )
 
+## Screenshots
+
+![Alt text](/Screenshots/Screenshot_20200604_190754.png?raw=true "Optional Title")
+
 ## Dependencies
 - kitty
 - python3
