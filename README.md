@@ -4,7 +4,7 @@ The program works on linux (haven't tested on )
 
 ## Screenshots
 
-![Alt text](/Screenshots/Screenshot_20200604_190754.png?raw=true "Optional Title")
+![Alt text](/Screenshots/Screenshot_20200604_190754.png "Optional Title")
 
 ## Dependencies
 - kitty
