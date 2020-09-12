@@ -18,6 +18,8 @@ The program works on linux (haven't tested on MacOS)
 You can either just run the script like this `python3 kitty-image-viewer.py /path/to/image.jpg`
 or move/copy it to /usr/local/bin/ (I called the shortcut img)
 
+    git clone https://github.com/D3faIt/kitty-image-viewer-simplified.git
+    cd kitty-image-viewer-simplified
     sudo cp kitty-image-viewer.py /usr/local/bin/img
     sudo chmod +x /usr/local/bin/img
 
