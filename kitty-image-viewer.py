@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
+import requests
 import os
 import sys
 import time
 import subprocess
 import glob
-
 
 startarguments = sys.argv[1:]
 originalarguments = startarguments
@@ -17,6 +17,7 @@ def checkFileType(file):
 	if not "." in file:
 		return False
 	extension = file.split(".")[-1].lower()
+	extension = extension.split("?")[0]
 	if extension == "gif":
 		return True
 	elif extension == "png":
