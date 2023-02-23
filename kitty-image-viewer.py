@@ -71,7 +71,7 @@ for argument in temparguments2:
 		elif argument.lower() == "-f" or argument.lower() == "--full":
 			showTerminalMaxImage = True
 		elif argument.lower() == "-c" or argument.lower() == "--clear":
-			subprocess.run(["/usr/bin/kitty", "icat", "--clear"])
+			subprocess.run(["/usr/bin/kitten", "icat", "--clear"])
 			exit()
 		elif argument.lower() == "-h" or argument.lower() == "--help":
 			helpmenu()
@@ -119,29 +119,29 @@ if len(arguments) > 1:
 		somethingshowedup = True
 		if showMaximumImage == True:
 			if behindText == True:
-				subprocess.run(["/usr/bin/kitty", "icat", "-z=-1", arg])
+				subprocess.run(["/usr/bin/kitten", "icat", "-z=-1", arg])
 			else:
-				subprocess.run(["/usr/bin/kitty", "icat", arg])
+				subprocess.run(["/usr/bin/kitten", "icat", arg])
 		elif showTerminalMaxImage == True:
 			if behindText == True:
 				if firstOneShown == False:
-					subprocess.run(["/usr/bin/kitty", "icat", "-z=-1", "--place=" + str(columns)+"x"+str(rows-1)+"@"+"0x0", "--align", "center", arg])
+					subprocess.run(["/usr/bin/kitten", "icat", "-z=-1", "--place=" + str(columns)+"x"+str(rows-1)+"@"+"0x0", "--align", "center", arg])
 					firstOneShown = True
 				else:
 					print()
-					subprocess.run(["/usr/bin/kitty", "icat", "-z=-1", "--place=" + str(columns)+"x"+str(rows)+"@"+"0x"+str(rows), "--align", "center", arg])
+					subprocess.run(["/usr/bin/kitten", "icat", "-z=-1", "--place=" + str(columns)+"x"+str(rows)+"@"+"0x"+str(rows), "--align", "center", arg])
 			else:
 				if firstOneShown == False:
-					subprocess.run(["/usr/bin/kitty", "icat", "--place=" + str(columns)+"x"+str(rows-1)+"@"+"0x0", "--align", "center", arg])
+					subprocess.run(["/usr/bin/kitten", "icat", "--place=" + str(columns)+"x"+str(rows-1)+"@"+"0x0", "--align", "center", arg])
 					firstOneShown = True
 				else:
 					print()
-					subprocess.run(["/usr/bin/kitty", "icat", "--place=" + str(columns)+"x"+str(rows)+"@"+"0x"+str(rows), "--align", "center", arg])
+					subprocess.run(["/usr/bin/kitten", "icat", "--place=" + str(columns)+"x"+str(rows)+"@"+"0x"+str(rows), "--align", "center", arg])
 		else:
 			if behindText == True:
-				subprocess.run(["/usr/bin/kitty", "icat", "-z=-1", "--place=" + str(columns//4)+"x19"+"@"+str(currentleft)+"x"+str(currenttop), "--align", "left", arg])
+				subprocess.run(["/usr/bin/kitten", "icat", "-z=-1", "--place=" + str(columns//4)+"x19"+"@"+str(currentleft)+"x"+str(currenttop), "--align", "left", arg])
 			else:
-				subprocess.run(["/usr/bin/kitty", "icat", "--place=" + str(columns//4)+"x19"+"@"+str(currentleft)+"x"+str(currenttop), "--align", "left", arg])
+				subprocess.run(["/usr/bin/kitten", "icat", "--place=" + str(columns//4)+"x19"+"@"+str(currentleft)+"x"+str(currenttop), "--align", "left", arg])
 			if arg == arguments[-1]:
 				if reachedbottom == True:
 					print ("\n")
@@ -166,19 +166,19 @@ elif len(arguments) == 1:
 		somethingshowedup = True
 		if showMaximumImage == True:
 			if behindText == True:
-				subprocess.run(["/usr/bin/kitty", "icat", "-z=-1", arguments[0]])
+				subprocess.run(["/usr/bin/kitten", "icat", "-z=-1", arguments[0]])
 			else:
-				subprocess.run(["/usr/bin/kitty", "icat", arguments[0]])
+				subprocess.run(["/usr/bin/kitten", "icat", arguments[0]])
 		elif showTerminalMaxImage == True:
 			if behindText == True:
-				subprocess.run(["/usr/bin/kitty", "icat", "-z=-1", "--place=" + str(columns)+"x"+str(rows-1)+"@"+"0x0", "--align", "center", arguments[0]])
+				subprocess.run(["/usr/bin/kitten", "icat", "-z=-1", "--place=" + str(columns)+"x"+str(rows-1)+"@"+"0x0", "--align", "center", arguments[0]])
 			else:
-				subprocess.run(["/usr/bin/kitty", "icat", "--place=" + str(columns)+"x"+str(rows-1)+"@"+"0x0", "--align", "center", arguments[0]])
+				subprocess.run(["/usr/bin/kitten", "icat", "--place=" + str(columns)+"x"+str(rows-1)+"@"+"0x0", "--align", "center", arguments[0]])
 		else:
 			if behindText == True:
-				subprocess.run(["/usr/bin/kitty", "icat", "-z=-1", "--place=" + str(columns//4)+"x20"+"@"+str(columns-(columns//4))+"x"+str(rows-21), "--align", "left", arguments[0]])
+				subprocess.run(["/usr/bin/kitten", "icat", "-z=-1", "--place=" + str(columns//4)+"x20"+"@"+str(columns-(columns//4))+"x"+str(rows-21), "--align", "left", arguments[0]])
 			else:
-				subprocess.run(["/usr/bin/kitty", "icat", "--place=" + str(columns//4)+"x20"+"@"+str(columns-(columns//4))+"x"+str(rows-21), "--align", "left", arguments[0]])
+				subprocess.run(["/usr/bin/kitten", "icat", "--place=" + str(columns//4)+"x20"+"@"+str(columns-(columns//4))+"x"+str(rows-21), "--align", "left", arguments[0]])
 elif len(originalarguments) == 0:
 	helpmenu()
 
