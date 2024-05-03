@@ -1,5 +1,5 @@
 # kitty-image-viewer-simplified
-This is a python script that makes it easier to display multiple images at once in kitty terminal.
+This is a Python script that makes it easier to display multiple images at once in kitty terminal.
 The program works on linux (haven't tested on MacOS)
 
 ## Screenshots
